@@ -17,8 +17,6 @@ const store =  createStore(
       applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
       reduxFirestore(fbConfig),
       reactReduxFirebase(fbConfig)
-       // <- needed if using firestore
-      // applyMiddleware(...middleware) // to add other middleware
     )
 )
 
