@@ -35,7 +35,7 @@ class CreateProjects extends Component{
              <textarea id='content' className='materialize-textarea'></textarea>
          </div>
          <div class="input-field">
-           <button type="btn pink lighten-1 z-depth-0">Create</button>
+           <button className="btn pink lighten-1 z-depth-0">Create</button>
          </div>
        </form>
      </div>
