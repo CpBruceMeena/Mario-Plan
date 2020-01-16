@@ -30,7 +30,7 @@ exports.userJoined = functions.auth.user()
   .onCreate(user => {
     return admin.firestore().collection('users')
     .doc(user.uid).get().then(doc => {
-      const newUser = doc.date();
+      const newUser = doc.data();
       const notification = {
         content: 'Joined the party',
         user: `${newUser.firstName} ${newUser.lastName}`,
@@ -39,5 +39,4 @@ exports.userJoined = functions.auth.user()
 
       return createNotification(notification);
     })
-
 })
